@@ -5,7 +5,31 @@ package com.javaex.basics;
 public class Types {
 	public static void main(String[] args) {
 //		varEx();
-		integerEx();
+//		integerEx();
+		floatDoubleEx();
+	}
+	
+	//	실수형 데이터 타입
+	private static void floatDoubleEx() {
+		//	float(4) < double(8)
+		float floatVar = 3.14159F;	//	f or F
+		double doubleVar = 3.14159;
+		
+		System.out.println(floatVar);
+		System.out.println(doubleVar);
+		
+		//	지수 표기법
+		doubleVar = 3E10;	//	3 * 10 ^ 10
+		floatVar = 3e-6f;	//	3 * 10 ^ -6
+		
+		System.out.println(floatVar);
+		System.out.println(doubleVar);
+		
+		//	부동소수점 계산의 문제
+		//	float, double은 정밀도를 포기하고
+		//	표현 범위 넓힌 것
+		//	정밀 실수 처리에는 적합하지 않다.
+		System.out.println(0.1 * 3);
 	}
 	
 	//	정수형 데이터 타입
