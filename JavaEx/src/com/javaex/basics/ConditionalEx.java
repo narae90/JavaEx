@@ -2,7 +2,7 @@ package com.javaex.basics;
 
 import java.util.Scanner;
 
-public class CoditionalEx {
+public class ConditionalEx {
 
 	public static void main(String[] args) {
 //		ifElseEx();
