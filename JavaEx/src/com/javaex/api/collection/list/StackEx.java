@@ -6,7 +6,7 @@ public class StackEx {
 
 	public static void main(String[] args) {
 		//	스택 생성
-		//	LIFO
+		//	LIFO(Last Input First Output)
 		Stack<Integer> stack = new Stack<>();
 		
 		for (int i = 0; i < 5; i++) {
