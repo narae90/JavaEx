@@ -8,7 +8,7 @@ public class HRSalary {
 	public static void main(String[] args) {
 		String dburl = "jdbc:oracle:thin:@localhost:1521:xe";
 		Connection conn = null;
-		PreparedStatement pstmt = null;
+		Statement stmt = null;
 		ResultSet rs = null;
 		
 		Scanner scanner = new Scanner(System.in);
@@ -31,14 +31,10 @@ public class HRSalary {
 			
 			String sql = "SELECT first_name || ' ' || last_name as name, salary " +
 					" FROM employees " +
-					" WHERE salary BETWEEN ? AND ? " + 
+					" WHERE salary BETWEEN " + minSalary + " AND " + maxSalary + 
 					" ORDER BY salary";
-			pstmt = conn.prepareStatement(sql);
-			
-			pstmt.setInt(1, minSalary);
-			pstmt.setInt(2, maxSalary);
-			
-			rs = pstmt.executeQuery();
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery(sql);
 			
 			while(rs.next()) {
 				System.out.printf("%s\t%d%n", 
@@ -52,7 +48,7 @@ public class HRSalary {
 		} finally {
 			try {
 				rs.close();
-				pstmt.close();
+				stmt.close();
 				conn.close();
 			} catch (Exception e) {
 				e.printStackTrace();
