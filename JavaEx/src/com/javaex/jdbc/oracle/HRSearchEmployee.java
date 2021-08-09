@@ -49,6 +49,7 @@ public class HRSearchEmployee {
 				e.printStackTrace();
 			}
 		}
+		scanner.close();
 	}
 
 }
