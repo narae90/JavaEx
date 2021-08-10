@@ -14,7 +14,7 @@ public class DAOApp {
 		deleteAuthor();
 //		searchAuthor();
 		
-		listAuthors();
+//		listAuthors();
 	}
 	
 	private static void searchAuthor() {
