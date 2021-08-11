@@ -11,7 +11,7 @@ public class DAOApp {
 		
 //		insertAuthor();
 //		updateAuthor();
-		deleteAuthor();
+//		deleteAuthor();
 //		searchAuthor();
 		
 //		listAuthors();
