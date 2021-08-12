@@ -10,7 +10,7 @@ public class DAOApp {
 		listAuthors();
 		
 //		insertAuthor();
-		updateAuthor();
+//		updateAuthor();
 //		deleteAuthor();
 //		searchAuthor();
 		
